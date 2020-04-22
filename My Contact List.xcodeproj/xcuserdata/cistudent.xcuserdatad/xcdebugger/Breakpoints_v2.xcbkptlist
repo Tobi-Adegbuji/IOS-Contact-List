@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "My Contact List/ContactsTableViewController.swift"
+            timestampString = "609257749.6797071"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "My Contact List/ContactsTableViewController.swift"
+            timestampString = "609248236.962483"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "ContactsTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Contact_List.ContactsTableViewController.contacts.getter : Swift.Array&lt;__ObjC.NSManagedObject&gt;"
+                  moduleName = "My Contact List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cistudent/Documents/MyContactList/My%20Contact%20List/My%20Contact%20List/ContactsTableViewController.swift"
+                  timestampString = "609248428.571094"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Contact_List.ContactsTableViewController.init (style : __C.UITableViewStyle) -&gt; My_Contact_List.ContactsTableViewController"
+                  moduleName = "My Contact List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cistudent/Documents/MyContactList/My%20Contact%20List/My%20Contact%20List/ContactsTableViewController.swift"
+                  timestampString = "609248428.596709"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Contact_List.ContactsTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; My_Contact_List.ContactsTableViewController"
+                  moduleName = "My Contact List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cistudent/Documents/MyContactList/My%20Contact%20List/My%20Contact%20List/ContactsTableViewController.swift"
+                  timestampString = "609248428.601101"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Contact_List.ContactsTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;My_Contact_List.ContactsTableViewController&gt;"
+                  moduleName = "My Contact List"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cistudent/Documents/MyContactList/My%20Contact%20List/My%20Contact%20List/ContactsTableViewController.swift"
+                  timestampString = "609248428.6059361"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
