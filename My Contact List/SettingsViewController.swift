@@ -22,9 +22,9 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
         // Do any additional setup after loading the view.
         pckSortField.dataSource = self;
         pckSortField.delegate = self;
-        tfDefaultState.addTarget(self,
-                                action: #selector(UITextFieldDelegate.textFieldShouldEndEditing(_:)),
-                                for: UIControlEvents.editingDidEnd)
+        //tfDefaultState.addTarget(self,
+                               // action: #selector(UITextFieldDelegate.textFieldShouldEndEditing(_:)),
+                                //for: UIControlEvents.editingDidEnd)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +39,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
             i += 1
         }
         pckSortField.reloadComponent(0)
-        tfDefaultState.text = settings.string(forKey: Constants.kDefaultState)
+       // tfDefaultState.text = settings.string(forKey: Constants.kDefaultState)
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +51,7 @@ class SettingsViewController: UIViewController, UIPickerViewDataSource, UIPicker
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         let defaultState = tfDefaultState.text
         let settings = UserDefaults.standard
-        settings.set(defaultState, forKey: Constants.kDefaultState)
+        //settings.set(defaultState, forKey: Constants.kDefaultState)
         settings.synchronize()
         
         return true

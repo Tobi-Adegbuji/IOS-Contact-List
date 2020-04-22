@@ -89,8 +89,8 @@ class ContactsTableViewController: UITableViewController {
 
         // Configure the cell...
         let contact = contacts[indexPath.row] as? Contact
-        cell.textLabel?.text = contact?.contactName
-        cell.detailTextLabel?.text = contact?.city
+        cell.textLabel?.text = "\(contact?.contactName ?? "nil"): \(contact?.cellNumber ?? "nil") "
+        cell.detailTextLabel?.text = "\(contact?.city ?? "nil"), \(contact?.state ?? "nil") "
         //cell.accessoryType = UITableViewCellAccessoryType.detailDisclosureButton
        cell.accessoryType = .detailDisclosureButton
             
