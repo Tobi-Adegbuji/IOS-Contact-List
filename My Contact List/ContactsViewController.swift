@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ContactsViewController: UIViewController, UITextFieldDelegate, DateControllerDelegate {
+class ContactsViewController: UIViewController, UITextFieldDelegate, DateControllerDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var currentContact: Contact?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -27,6 +27,10 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
     @IBOutlet weak var txtHomeEmail: UITextField!
     @IBOutlet weak var lblBirthdate: UILabel!
     @IBOutlet weak var btnChange: UIButton!
+    @IBOutlet weak var imgContactPicture: UIImageView!
+    @IBOutlet weak var lblPhone: UILabel!
+    @IBOutlet weak var lblHomePhone: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +49,11 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
             if currentContact!.birthday != nil {
                 lblBirthdate.text = formatter.string(from:currentContact!.birthday as! Date)
             }
+            
+            if let imageData = currentContact?.image as? Data {
+                imgContactPicture.image = UIImage(data: imageData)
+            }
+            
         }
         
         // Do any additional setup after loading the view.
@@ -57,12 +66,71 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
                                 for: UIControlEvents.editingDidEnd)
             
         }
+        
+        let longPress = UILongPressGestureRecognizer.init(target: self,
+                                                          action: #selector(callPhone(gesture:)))
+        lblPhone.addGestureRecognizer(longPress)
+        
+        let longPress2 = UILongPressGestureRecognizer.init(target: self,
+                                                          action: #selector(textPhone(gesture:)))
+        
+        lblHomePhone.addGestureRecognizer(longPress2)
+    }
+    
+    func callPhone(gesture: UILongPressGestureRecognizer) {
+        if gesture.state == .began {
+            let number = txtCell.text
+            if number!.characters.count > 0 {
+                let url = NSURL(string: "telprompt://\(number!)")
+                UIApplication.shared.open(url as! URL, options: [:], completionHandler: nil)
+                print("Calling Phone Number: \(url!)")
+            }
+        }
+    }
+    
+    func textPhone(gesture: UILongPressGestureRecognizer) {
+        if gesture.state == .began {
+            let number = txtPhone.text
+            if number!.characters.count > 0 {
+                let url = NSURL(string: "sms://\(number!)")
+                UIApplication.shared.open(url as! URL, options: [:], completionHandler: nil)
+                print("Texting Phone Number: \(url!)")
+            }
+        }
+    }
+    
+    
+    @IBAction func changePicture(_ sender: Any) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let cameraController = UIImagePickerController()
+            cameraController.sourceType = .camera
+            cameraController.cameraCaptureMode = .photo
+            cameraController.delegate = self
+            cameraController.allowsEditing = true
+            self.present(cameraController, animated: true, completion: nil)
+        }
+    }
+    
+    
+
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            imgContactPicture.contentMode = .scaleAspectFit
+            imgContactPicture.image = image
+            if currentContact == nil {
+                let context = appDelegate.persistentContainer.viewContext
+                currentContact = Contact(context: context)
+            }
+            currentContact?.image = NSData(data: UIImageJPEGRepresentation(image, 1.0)!)
+        }
+        dismiss(animated: true, completion: nil)
     }
     
     
     
-    
-    
+
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         currentContact?.contactName = txtName.text
         currentContact?.streetAddress = txtAddress.text

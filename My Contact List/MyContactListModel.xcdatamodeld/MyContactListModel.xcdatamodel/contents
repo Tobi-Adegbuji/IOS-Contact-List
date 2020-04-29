@@ -7,6 +7,7 @@
         <attribute name="contactName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="homeEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="streetAddress" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,7 +19,7 @@
         <attribute name="sortField" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Contact" positionX="-63" positionY="-18" width="128" height="193"/>
+        <element name="Contact" positionX="-63" positionY="-18" width="128" height="210"/>
         <element name="Settings" positionX="97" positionY="36" width="128" height="88"/>
     </elements>
 </model>

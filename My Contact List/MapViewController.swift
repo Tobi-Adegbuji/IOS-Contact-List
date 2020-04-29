@@ -67,7 +67,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             if let coordinate = bestMatch?.coordinate {
                 let mp = MapPoint(latitude: coordinate.latitude, longitude: coordinate.longitude)
                 mp.title = contact.contactName
-                mp.subtitle = contact.streetAddress
+                mp.subtitle = "\(contact.streetAddress ?? "nil"), \(contact.city ?? "nil")"
                 mapView.addAnnotation(mp)
             }
             else {
