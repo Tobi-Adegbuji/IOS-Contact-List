@@ -105,8 +105,7 @@ class ContactsViewController: UIViewController, UITextFieldDelegate, DateControl
         }
         appDelegate.saveContext()
         
-        // Temporary solution for confirming saved contact
-        print("You saved a new contact!")
+         print("You saved a new contact!")
         
         sgmtEditMode.selectedSegmentIndex = 0
         changeEditMode(self)

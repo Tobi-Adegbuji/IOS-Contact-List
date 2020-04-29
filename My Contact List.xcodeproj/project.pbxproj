@@ -18,9 +18,10 @@
 		FF46CA4F2434E8890018315B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF46CA4E2434E8890018315B /* MapViewController.swift */; };
 		FF46CA5124455B680018315B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF46CA5024455B680018315B /* Constants.swift */; };
 		FF46CA56244572450018315B /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF46CA55244572450018315B /* DateViewController.swift */; };
-		FF46CA5824458D990018315B /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF46CA5724458D990018315B /* StateViewController.swift */; };
 		FF46CA5B2445A0080018315B /* MyContactListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF46CA592445A0080018315B /* MyContactListModel.xcdatamodeld */; };
 		FF747C68244FC9D300BE264F /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF747C67244FC9D300BE264F /* ContactsTableViewController.swift */; };
+		FFEA83EE24598EAF006D200D /* LocationDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEA83ED24598EAF006D200D /* LocationDemoViewController.swift */; };
+		FFEA83F02459BC4C006D200D /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEA83EF2459BC4C006D200D /* MapPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +59,12 @@
 		FF46CA4E2434E8890018315B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FF46CA5024455B680018315B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FF46CA55244572450018315B /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
-		FF46CA5724458D990018315B /* StateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		FF46CA5A2445A0080018315B /* MyContactListModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyContactListModel.xcdatamodel; sourceTree = "<group>"; };
 		FF46CA5C2445A0510018315B /* MyContactListModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MyContactListModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		FF46CA5D2445A0B20018315B /* MyContactListModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MyContactListModel 3.xcdatamodel"; sourceTree = "<group>"; };
 		FF747C67244FC9D300BE264F /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		FFEA83ED24598EAF006D200D /* LocationDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDemoViewController.swift; sourceTree = "<group>"; };
+		FFEA83EF2459BC4C006D200D /* MapPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +119,8 @@
 				FF747C67244FC9D300BE264F /* ContactsTableViewController.swift */,
 				FF46CA1A2434E0770018315B /* AppDelegate.swift */,
 				FF46CA202434E0770018315B /* Main.storyboard */,
-				FF46CA5724458D990018315B /* StateViewController.swift */,
+				FFEA83EF2459BC4C006D200D /* MapPoint.swift */,
+				FFEA83ED24598EAF006D200D /* LocationDemoViewController.swift */,
 				FF46CA5024455B680018315B /* Constants.swift */,
 				FF46CA232434E0770018315B /* Assets.xcassets */,
 				FF46CA252434E0770018315B /* LaunchScreen.storyboard */,
@@ -287,10 +290,11 @@
 				FF46CA5124455B680018315B /* Constants.swift in Sources */,
 				FF46CA4F2434E8890018315B /* MapViewController.swift in Sources */,
 				FF46CA56244572450018315B /* DateViewController.swift in Sources */,
-				FF46CA5824458D990018315B /* StateViewController.swift in Sources */,
 				FF46CA4B2434E8420018315B /* ContactsViewController.swift in Sources */,
+				FFEA83EE24598EAF006D200D /* LocationDemoViewController.swift in Sources */,
 				FF46CA1B2434E0770018315B /* AppDelegate.swift in Sources */,
 				FF46CA5B2445A0080018315B /* MyContactListModel.xcdatamodeld in Sources */,
+				FFEA83F02459BC4C006D200D /* MapPoint.swift in Sources */,
 				FF46CA4D2434E8710018315B /* SettingsViewController.swift in Sources */,
 				FF747C68244FC9D300BE264F /* ContactsTableViewController.swift in Sources */,
 			);

@@ -11,7 +11,7 @@ import CoreData
 
 class ContactsTableViewController: UITableViewController {
 
-    //let contacts = ["Jim", "John", "Dana", "Rosie", "Justin","Jeremy" ,"Sarah", "Matt", "Joe", "Donald", "Jeff"]
+    
     
     var contacts: [NSManagedObject] = []
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -89,8 +89,8 @@ class ContactsTableViewController: UITableViewController {
 
         // Configure the cell...
         let contact = contacts[indexPath.row] as? Contact
-        cell.textLabel?.text = "\(contact?.contactName ?? "nil"): \(contact?.cellNumber ?? "nil") "
-        cell.detailTextLabel?.text = "\(contact?.city ?? "nil"), \(contact?.state ?? "nil") "
+        cell.textLabel?.text = "\(contact?.contactName ?? "nil")"
+        cell.detailTextLabel?.text = "\(contact?.city ?? "nil"), \(contact?.state ?? "nil")"
         //cell.accessoryType = UITableViewCellAccessoryType.detailDisclosureButton
        cell.accessoryType = .detailDisclosureButton
             
@@ -153,6 +153,23 @@ class ContactsTableViewController: UITableViewController {
             self.navigationController?.pushViewController(controller!, animated: true)
         }
         
+        let actionHandlerDelete = { (action:UIAlertAction!) -> Void in
+            let contact = self.contacts[indexPath.row] as? Contact
+            let context = self.appDelegate.persistentContainer.viewContext
+            context.delete(contact!)
+            
+            do{
+                try context.save()
+            }
+            catch{
+                fatalError("Error saving context: \(error)")
+            }
+            
+            self.loadDataFromDatabase()
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+        
         let alertController = UIAlertController( title:"Contact Selected",
                                                  message:"Selected row: \(indexPath.row) \(name)",
                                                 preferredStyle: .alert)
@@ -161,8 +178,11 @@ class ContactsTableViewController: UITableViewController {
         
         let actionDetails = UIAlertAction(title: "Show Details", style: .default, handler: actionHandler)
         
+        let actionDelete = UIAlertAction(title: "Delete Contact", style: .destructive, handler: actionHandlerDelete)
+        
         alertController.addAction(actionCancel)
         alertController.addAction(actionDetails)
+        alertController.addAction(actionDelete)
         present(alertController, animated: true, completion: nil)
     
         

@@ -23,9 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             settings.set("city", forKey: Constants.kSortField)
         }
         
-        if settings.string(forKey: Constants.kDefaultState) == nil {
-            settings.set("ga", forKey: Constants.kDefaultState)
-        }
         
         if settings.string(forKey: Constants.kSortDirectionAscending) == nil {
             settings.set(true, forKey: Constants.kSortDirectionAscending)
@@ -33,7 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         settings.synchronize()
         NSLog("Sort field: %@", settings.string(forKey: Constants.kSortField)!)
-        NSLog("Default state: %@", settings.string(forKey: Constants.kDefaultState)!)
         NSLog("Sort direction: \(settings.bool(forKey: Constants.kSortDirectionAscending))")
         
         return true
